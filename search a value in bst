@@ -1,0 +1,13 @@
+o(logn) time
+bool search(struct Node* root, int x) {
+    
+    if(!root) return false;
+    
+    if(x>root->data)
+    return search(root->right,x);
+    else if(x<root->data)
+    return search(root->left,x);
+    else
+    return true;
+   
+}
